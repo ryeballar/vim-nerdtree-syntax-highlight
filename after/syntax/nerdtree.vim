@@ -419,9 +419,9 @@ for [key, val] in items(g:NERDTreeExtensionHighlightColor)
   endif
 
   if !exists('g:NERDTreeDisableFileExtensionHighlight') && val != ''
-    call s:X(icon_identifier, val, '', '')
+    autocmd VimEnter * call s:X(icon_identifier, val, '', '')
     if exists('g:NERDTreeFileExtensionHighlightFullName')
-      call s:X(label_identifier, val, '', '')
+      autocmd VimEnter * call s:X(label_identifier, val, '', '')
     endif
   endif
 endfor
@@ -458,14 +458,14 @@ for [key, val] in items(g:NERDTreeExactMatchHighlightColor)
   endif
 
   if !exists('g:NERDTreeDisableExactMatchHighlight') && val != ''
-    call s:X(icon_identifier, val, '', '')
+    autocmd VimEnter * call s:X(icon_identifier, val, '', '')
     if exists('g:NERDTreeExactMatchHighlightFullName')
-      call s:X(label_identifier, val, '', '')
+      autocmd VimEnter * call s:X(label_identifier, val, '', '')
     endif
     if exists('g:NERDTreeHighlightFolders')
-      call s:X(folder_icon_identifier, val, '', '')
+      autocmd VimEnter * call s:X(folder_icon_identifier, val, '', '')
       if exists('g:NERDTreeHighlightFoldersFullName')
-        call s:X(folder_identifier, val, '', '')
+        autocmd VimEnter * call s:X(folder_identifier, val, '', '')
       endif
     endif
   endif
@@ -503,9 +503,9 @@ for [key, val] in items(g:NERDTreePatternMatchHighlightColor)
   endif
 
   if !exists('g:NERDTreeDisablePatternMatchHighlight') && val != ''
-    call s:X(icon_identifier, val, '', '')
+    autocmd VimEnter * call s:X(icon_identifier, val, '', '')
     if exists('g:NERDTreePatternMatchHighlightFullName')
-      call s:X(label_identifier, val, '', '')
+      autocmd VimEnter * call s:X(label_identifier, val, '', '')
     endif
   endif
 endfor
